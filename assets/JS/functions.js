@@ -50,6 +50,8 @@ const operations = (num1, num2, sign) => {
     return result;
 }
 
+// Punto 6
+
 const convertTemperature = (celsius) => {
     let fahrenheit = (celsius * 9/5) + 32;
     let label = "Tiene fiebre o es el apocalípsis";
@@ -68,4 +70,44 @@ const convertTemperature = (celsius) => {
     }
     return print(label);
 }
+
+// Punto 7
+
+const calculateMass = (height, weight) => {
+    let label = "Obeso debe ir al nutricionista";
+    let IMC = weight/(height * 2);
+    switch (true) {
+        case (IMC < 18.5):
+            label = "Bajo peso debe ir al nutricionista";
+            break;
+        case (IMC >= 18.5 && IMC <= 24.9):
+            label = "Normal";
+            break;
+        case (IMC >= 25 && IMC <= 29.9):
+            label = "Sobrepeso";
+            break;
+        default:
+            break;
+    }
+    return print(label);
+}
+
+// Punto 8
+
+const verifyName = (name) => {
+    if (!isNaN(name)) {
+        return printName(undefined);
+    }
+    return printName(name);
+}
+
+const printName = (result) => {
+    if (result) {
+        return "Welcome, " + result;
+    } else {
+        return "Error";
+    }
+}
+
+// Punto 9
 
