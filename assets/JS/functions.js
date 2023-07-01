@@ -3,7 +3,7 @@ const calculateTriangleSurface = (width, height) => {
 }
 
 const displaySpeed = (speed, returnType) => {
-    if (returnType == "1") {
+    if (returnType == 1) {
         return speed / 1.609344;
     } else {
         return speed * 1000;
