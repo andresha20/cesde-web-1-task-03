@@ -111,3 +111,50 @@ const printName = (result) => {
 
 // Punto 9
 
+const getProducts = () => {
+    const products = parseInt(prompt("Cantidad de productos"));
+    let total = 0;
+    for (let i = 1; i <= products; i++) {
+        let price = parseInt(prompt("Precio " + i))
+        total += price;
+    }
+    return getTotal(total);
+}
+
+const getTotal = total => {
+    let totalWithIVA = total * 1.19;
+    return print("Total is " + totalWithIVA);
+}
+
+// Punto 10
+
+const getCurrentDate = () => {
+    let date = Date.now();
+    return getTimeLeft(date);
+}
+
+const getTimeLeft = (date) => {
+    const total = Date.parse("31 Dec 2023") - Date.parse(new Date(date));
+    const seconds = Math.floor( (total/1000) % 60 );
+    const minutes = Math.floor( (total/1000/60) % 60 );
+    const hours = Math.floor( (total/(1000*60*60)) % 24 );
+    const days = Math.floor( total/(1000*60*60*24) );
+
+    return print(`Total: ${total} | Time: ${days} days - ${hours}:${minutes}:${seconds}`);
+}
+
+// Punto 11
+
+const getTotalProducts = () => {
+    const products = parseInt(prompt("Cantidad de productos"));
+    let totalProducts = [];
+    for (let i = 1; i <= products; i++) {
+        let name = prompt("Nombre " + i)
+        let price = parseInt(prompt("Precio " + i))
+        let amount = parseInt(prompt("Cantidad " + i))
+        totalProducts.push({ name, price, amount })
+    }
+    return getProductsInArray(totalProducts);
+}
+
+const getProductsInArray = (totalProducts) => totalProducts.map(el => console.log(el))
