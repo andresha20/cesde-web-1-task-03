@@ -29,7 +29,7 @@ const runScript = (e) => {
         case 5:
             let num1 = getAlert("Number 1", true);
             let num2 = getAlert("Number 2", true);
-            let sign = getAlert("Number from 1 to 5");
+            let sign = getAlert("Number from 1 to 5", true);
             break;
         case 6:
             let celsius = getAlert("Celsius", true);
