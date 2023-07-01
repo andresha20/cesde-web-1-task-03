@@ -42,7 +42,7 @@ const runScript = (e) => {
             break;
         case 8:
             let n = getAlert("Name");
-            showName(n);
+            verifyName(n);
             break;
         case 9:
             getProducts();
