@@ -23,7 +23,7 @@ const showName = (name) => {
     if (!isNaN(name)) {
         label = "Insert a valid name!";
     }
-    return print(label);
+    return label;
 }
 
 const operations = (num1, num2, sign) => {
@@ -68,7 +68,7 @@ const convertTemperature = (celsius) => {
         default:
             break;
     }
-    return print(label);
+    return label;
 }
 
 // Punto 7
@@ -89,7 +89,7 @@ const calculateMass = (height, weight) => {
         default:
             break;
     }
-    return print(label);
+    return label;
 }
 
 // Punto 8
@@ -123,7 +123,7 @@ const getProducts = () => {
 
 const getTotal = total => {
     let totalWithIVA = total * 1.19;
-    return print("Total is " + totalWithIVA);
+    return console.log("Total is " + totalWithIVA);
 }
 
 // Punto 10
@@ -140,7 +140,7 @@ const getTimeLeft = (date) => {
     const hours = Math.floor( (total/(1000*60*60)) % 24 );
     const days = Math.floor( total/(1000*60*60*24) );
 
-    return print(`Total: ${total} | Time: ${days} days - ${hours}:${minutes}:${seconds}`);
+    return console.log(`Total: ${total} | Time: ${days} days - ${hours}:${minutes}:${seconds}`);
 }
 
 // Punto 11
